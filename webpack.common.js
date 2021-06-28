@@ -88,5 +88,17 @@ module.exports = {
       chunks: ["index", "another"],
       filename: "another.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/Kontakt.html",
+      inject: true,
+      chunks: ["index", "another","Kontakt"],
+      filename: "Kontakt.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/Omnie.html",
+      inject: true,
+      chunks: ["index", "another","Kontakt","O mnie"],
+      filename: "Omnie.html",
+    }),
   ],
 };

@@ -1,13 +1,149 @@
 @import "~normalize.css";
-
 @import "_variables";
-@import "modules/hello.scss";
 
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
-  background: $wtf;
-  color: #fff;
+  background: rgb(232, 224, 112);
+  background: linear-gradient(
+    0deg,
+    rgba(232, 224, 112, 1) 0%,
+    rgba(45, 112, 253, 1) 100%
+  );
+ 
+}
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 80px;
+}
+.headings__h1 {
+  color: #ffd500;
+  font-size: 60px;
+}
+.headings__h2 {
+  color: #fdc500;
+  font-size: 30px;
+  &::before{
+    content:"";
+    display: inline-block;
+    background: #ffd500;
+    width: 22px;
+    height: 22px;
+    border-radius: 20px;
+    margin-right: 14px;
+  }
+}
+.text__article {
+  color: white;
+  font-size: 24px;
+}
+img {
+  margin: 0 10%;
+  width: 50%;
+  height: 50%;
+}
+.navigation {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #ffd500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  text-shadow: 2px 2px 5px #00296b;
+  font-size: 30px;
+  color: white;
+  min-height: 90px;
+  width: 100%;
+  margin: 0 auto;
+}
+a {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 20px 20px;
+  text-decoration: none;
+  color: white;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hamburger--js{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    display: none;
+  }
+  .header {
+    background-color: #ffd500;
+    min-height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .grid__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .article__main {
+    padding: 5%;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 26px;
+  }
+
+  .headings__h1 {
+    margin: 5%;
+    font-size: 26px;
+  }
+  .headings__h2 {
+    margin: 5%;
+    font-size: 60%;
+  }
+  .text__article {
+    font-size: 60%;
+  }
+  .hamburger--js {display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+  }
+  main {
+    margin: 60px auto;
+  }
+  .navigation--open {
+    display: block;
+    text-decoration: none;
+    font-size: 65px;
+    color: white;
+    min-height: 130px;
+  }
+  a {
+    display: block;
+    text-align: left;
+    letter-spacing: 2px;
+    margin: 30px 60px;
+    text-decoration: none;
+    color: white;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
