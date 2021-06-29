@@ -1,4 +1,4 @@
-![moj obrazek](./dist/img/readme.png)
+![moj obrazek](./src/assets/img/readme.png)
 # Mój homepage na potrzeby kursu :) 
 
 Cześć ! Witam na mojej stronie treningowej. 
