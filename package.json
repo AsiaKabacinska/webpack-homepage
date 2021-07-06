@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "sass":"npx node-sass -w scss/main.scss main.css",
+    "sass": "npx node-sass -w scss/main.scss main.css",
     "start": "webpack-dev-server --config webpack.dev.js --mode development",
     "build": "webpack --config webpack.prod.js --mode production",
     "publish": "npm run build && gh-pages -d dist",

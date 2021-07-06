@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <title>Document</title>
+    <title>webpack - homepage </title>
   </head>
   <body>
     <header class="header">
@@ -172,6 +172,48 @@
              <br>
            </p>
         </article>
+        <article class="article__main">
+          <h2 class="headings__h2 headings__h1--homeworks">
+            Dziewiąta praca domowa
+          </h2>
+          <p class="text__article">
+   1. Uzupełnij swoje sekcje head ( w każdym projekcie 
+   jeśli masz tam coś co chcesz opublikować, można przekopiować ze starterkita do tych robionych 
+   tylko w htmlu, uzupełnij te tagi: title, description, meta tagi og, spróbuj też wykonać jakąś grafikę, którą 
+   będzie można później opublikować).
+   2. Dodaj animację w swoich projektach (np. na linkach - czyli na akcje hover jakieś przejście między kolorami , czy zmiana opacity itd
+   , kombinuj ! )
+   3. Stwórz hydrapp (można sciągnąć design) ile szklanek wody dzisiaj wypiliśmy. Odpalamy za pomocą PWA na telefonie bądź kompie i 
+   mam info ile szklanek dzisiaj wypiłam, więc ten licznik musi się zerować po północy, za pomocą 2 przycisków -zwiększamy lub
+  zmniejszamy wartość o 1. Trzeba pilnować czy nie będzie mniejsze niż 0 (warunek żeby najniższa możliwa wartość była 0, jesli sie na razie 
+  nie uda to też spoko).Możemy też zmieniać opacity nawodnienia tej szklanki tj .svg więc można to też jakoś animować. Co trzeba zrobić, żeby 
+  stworzyć hydrapp :
+  - załóż nowe repozytorium np hydrapp
+  -wgraj starterkita
+  - uzupełnij manifest.json ze swoim adresem i odkomentuj wymagane linijki 
+  - w figmie otwóz hydrapp.fig
+  - Przenieś wygląd na kod 
+  - Stwórz guerySelectory do wszystkich elementów z którymi masz interakcje (buttony, wartość licznika)
+  - do przycisków dodaj eventListenery :
+  a. Dodaj szklankę - zwieksza wartosc o 1 
+  b. usun szklankę - zmniejsza wartosc o 1 ( ustaw limit zeby nie mogł zejsc )
+  - wartość szklanek przechowaj w localStorage pod kluczem z dzisiejszą datą:
+   const key = new Date().toISOString().slice(0,10)
+   - jesli pod kluczem nic nie ma - wstaw 0 (nowy dzien)
+   - w ten sposób w localStoragebd mieć historię dni (możesz ją póżniej wykorzystać - może 
+   kolejna podstrona z historią, hm? )
+
+   FLOW URUCHOMENIA APPKI (JS):
+   1. Sprawdź czy pod kluczem z dzisiejszą datą jest jakaś wartość/ w ogóle istnieje 
+   a. jesli tak - wstaw ją w licznik 
+   b. jeśli nie - ustaw ją na zro , stwórz wpis w localStorage i wstaw ją w licznik 
+   2. Po kliknięciu w odpowiedni button zmieniaj odpowiednio wartosc w localStorage i aktualizuj wartosc licznika w aplikacji
+   3. Po północy każdego dnia kiedy uruchomisz appke stworzy sie nowy klucz w localStorage zacznie od nowa 
+   (można też wygenerować ikonę tej aplikacji - lekcja z pwa ) Lepiej to zrobic przez github.io a nie przez localhosta !!! 
+   Przygotować tą aplikacje pod hoisting na githubie.
+           <br>
+         </p>
+      </article>
           </p>
         </article>
       </section>

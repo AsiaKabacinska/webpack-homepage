@@ -1,6 +1,22 @@
 @import "~normalize.css";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 
+@keyframes appear {
+//   from {
+//     transform: translateX(-300px);
+//   }
+//   to{
+// transform: translateX(600px);
+//   }
+from{
+  opacity: 1;
+ 
+}
+to{
+  opacity: 0;
+}
+}
 html {
   box-sizing: border-box;
 }
@@ -24,8 +40,22 @@ body {
   column-gap: 80px;
 }
 .headings__h1 {
+  font-family: 'Racing Sans One', cursive;
   color: #ffd500;
   font-size: 60px;
+  letter-spacing: 4px;
+  cursor: pointer;
+  animation-name:appear;
+  animation-duration:3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+  &:hover{
+   
+    // transform: scale(1.2);
+  }
 }
 .headings__h2 {
   color: #fdc500;
@@ -43,11 +73,15 @@ body {
 .text__article {
   color: white;
   font-size: 24px;
+  transform: 5s;
 }
 img {
   margin: 0 10%;
   width: 50%;
   height: 50%;
+  &:hover{
+  transform: scale(1.2);
+  }
 }
 .navigation {
   display: flex;
@@ -99,6 +133,7 @@ main {
     grid-template-columns: repeat(1, 1fr);
   }
   .article__main {
+
     padding: 5%;
     width: 100%;
     margin: 0 auto;
@@ -108,7 +143,7 @@ main {
   .headings__h1 {
     margin: 5%;
     font-size: 26px;
-  }
+   }
   .headings__h2 {
     margin: 5%;
     font-size: 60%;
@@ -144,6 +179,12 @@ main {
     color: white;
     &:hover{
       text-decoration: underline;
+      
     }
   }
+}
+.time--js{
+  font-family: sans-serif ;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
