@@ -2,21 +2,21 @@
 @import "_variables";
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 
-@keyframes appear {
+// @keyframes appear {
 //   from {
 //     transform: translateX(-300px);
 //   }
 //   to{
 // transform: translateX(600px);
 //   }
-from{
-  opacity: 1;
+// from{
+//   opacity: 1;
  
-}
-to{
-  opacity: 0;
-}
-}
+// }
+// to{
+//   opacity: 0;
+// }
+// }
 html {
   box-sizing: border-box;
 }
@@ -45,12 +45,12 @@ body {
   font-size: 60px;
   letter-spacing: 4px;
   cursor: pointer;
-  animation-name:appear;
-  animation-duration:3s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  // animation-name:appear;
+  // animation-duration:3s;
+  // animation-delay: 2s;
+  // animation-fill-mode: forwards;
+  // animation-iteration-count: infinite;
+  // animation-timing-function: ease-in-out;
 
   &:hover{
    
@@ -80,7 +80,9 @@ img {
   width: 50%;
   height: 50%;
   &:hover{
+    cursor: pointer;
   transform: scale(1.2);
+  animation-duration: 0.3s;
   }
 }
 .navigation {
